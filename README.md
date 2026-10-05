@@ -1,7 +1,21 @@
 # 🎓 MY B.TECH STUDY HUB
 ### Personal 4-Year Engineering Knowledge Base & Study Management System
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/manishjhcssp-prog/B.TECH-STUDY-HUB)
+
 A full-stack, personal study portal designed to organize all your study materials, lecture notes, question banks, presentation slides, and syllabi for all **FOUR YEARS** of B.Tech engineering.
+
+---
+
+## 🌐 1-Click Cloud Deployment (Render.com)
+
+You can publish this entire website on the cloud 24/7 for **FREE** with 1 click:
+
+1. Click the **[Deploy to Render](https://render.com/deploy?repo=https://github.com/manishjhcssp-prog/B.TECH-STUDY-HUB)** button above.
+2. Sign in with your GitHub account (`manishjhcssp-prog`).
+3. Render will automatically detect `render.yaml` and set up the build and start commands.
+4. Click **Apply / Create Web Service**.
+5. Your website will be live at a public HTTPS URL (e.g. `https://btech-study-hub.onrender.com`) in under 2 minutes!
 
 ---
 
