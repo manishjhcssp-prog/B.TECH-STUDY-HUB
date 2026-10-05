@@ -1013,6 +1013,18 @@ app.get('/api/lookup', (req, res) => {
   }
 });
 
+// Serve frontend build in production
+const clientDist = path.join(__dirname, '..', 'client', 'dist');
+if (fs.existsSync(clientDist)) {
+  app.use(express.static(clientDist));
+  app.use((req, res, next) => {
+    if (req.method === 'GET' && !req.path.startsWith('/api') && !req.path.startsWith('/study-materials')) {
+      return res.sendFile(path.join(clientDist, 'index.html'));
+    }
+    next();
+  });
+}
+
 async function startServer() {
   await runImporter();
   app.listen(PORT, () => {
@@ -1021,3 +1033,4 @@ async function startServer() {
 }
 
 startServer();
+

@@ -602,6 +602,12 @@ async function migrateExistingFiles() {
     if (!fs.existsSync(src.dir)) continue;
 
     for (const fileName of src.files) {
+      // Strictly exclude any records or presentations/PPTs
+      const fnLower = fileName.toLowerCase();
+      if (fnLower.includes('presentation') || fnLower.includes('record') || fnLower.endsWith('.ppt') || fnLower.endsWith('.pptx')) {
+        continue;
+      }
+
       const srcPath = path.join(src.dir, fileName);
       if (!fs.existsSync(srcPath)) continue;
 
