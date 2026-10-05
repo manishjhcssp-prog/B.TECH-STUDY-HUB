@@ -3,8 +3,9 @@ node_modules/
 client/node_modules/
 
 # Production builds
-client/dist/
-dist/
+/dist/
+!client/dist/
+!client/dist/**
 
 # SQLite WAL and temporary files
 *.db-wal
