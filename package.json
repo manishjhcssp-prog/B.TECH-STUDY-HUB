@@ -1,0 +1,32 @@
+{
+  "name": "niat_four_years",
+  "version": "1.0.0",
+  "description": "Personal B.Tech Four Years Study Management Hub",
+  "main": "server/index.js",
+  "scripts": {
+    "start:server": "node server/index.js",
+    "start:client": "npm --prefix client run dev",
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,green\" \"npm run start:server\" \"npm run start:client\"",
+    "seed": "node -e \"require('./server/importer').runImporter()\""
+  },
+  "keywords": [
+    "btech",
+    "study-portal",
+    "materials",
+    "syllabus",
+    "engineering"
+  ],
+  "type": "commonjs",
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mammoth": "^1.13.0",
+    "mime-types": "^3.0.2",
+    "multer": "^2.4.0",
+    "pdf-parse": "^2.4.5"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
